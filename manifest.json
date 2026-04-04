@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-04-04T11:00:00Z",
+  "extensions": [
+    {
+      "id": "sqlite-vec",
+      "name": "sqlite-vec",
+      "description": "Vector search for SQLite \u2014 fast, pure C, no dependencies.",
+      "version": "0.1.9",
+      "homepage": "https://github.com/asg017/sqlite-vec",
+      "entryPoint": null,
+      "upstream": {
+        "repo": "asg017/sqlite-vec",
+        "tagPrefix": "v"
+      },
+      "platforms": {
+        "macos-arm64": {
+          "url": "https://github.com/asg017/sqlite-vec/releases/download/v0.1.9/sqlite-vec-0.1.9-loadable-macos-aarch64.tar.gz",
+          "sha256": "8282126333399ddfe98bbbcc7a1936e7252625aac49df056a98be602e46bfd29",
+          "filename": "vec0.dylib"
+        },
+        "macos-x86_64": {
+          "url": "https://github.com/asg017/sqlite-vec/releases/download/v0.1.9/sqlite-vec-0.1.9-loadable-macos-x86_64.tar.gz",
+          "sha256": "53ad76e400786515e2edcaed2f01271dda846316390b761fadbd2dcf56aa4713",
+          "filename": "vec0.dylib"
+        }
+      }
+    },
+    {
+      "id": "sqlean",
+      "name": "sqlean",
+      "description": "All-in-one SQLite toolkit \u2014 crypto, text, math, stats, regexp, uuid, and more.",
+      "version": "0.28.2",
+      "homepage": "https://github.com/nalgeon/sqlean",
+      "entryPoint": null,
+      "upstream": {
+        "repo": "nalgeon/sqlean",
+        "tagPrefix": ""
+      },
+      "platforms": {
+        "macos-arm64": {
+          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.2/sqlean-macos-arm64.zip",
+          "sha256": "7600f26a655475c0750d732e4b44173ba6ea0e5efac377fac9a6e2c575bdedb5",
+          "filename": "sqlean.dylib"
+        },
+        "macos-x86_64": {
+          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.2/sqlean-macos-x64.zip",
+          "sha256": "713e598b8bbaa82473c367c7b381e57d6cf5a6cc8a2e16f77674d7e72583d691",
+          "filename": "sqlean.dylib"
+        }
+      }
+    }
+  ]
+}
