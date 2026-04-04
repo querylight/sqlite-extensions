@@ -9,6 +9,7 @@
       "version": "0.1.9",
       "homepage": "https://github.com/asg017/sqlite-vec",
       "entryPoint": null,
+      "sampleSQL": "-- sqlite-vec: create a vector table and search\nCREATE VIRTUAL TABLE demo_vectors USING vec0(embedding float[4]);\nINSERT INTO demo_vectors(rowid, embedding) VALUES (1, '[1.0, 0.0, 0.0, 0.0]'), (2, '[0.0, 1.0, 0.0, 0.0]'), (3, '[0.9, 0.1, 0.0, 0.0]');\nSELECT rowid, distance FROM demo_vectors WHERE embedding MATCH '[1.0, 0.0, 0.0, 0.0]' ORDER BY distance LIMIT 3;",
       "upstream": {
         "repo": "asg017/sqlite-vec",
         "tagPrefix": "v"
@@ -33,6 +34,7 @@
       "version": "0.28.2",
       "homepage": "https://github.com/nalgeon/sqlean",
       "entryPoint": null,
+      "sampleSQL": "-- sqlean: try some useful functions\nSELECT hex(sha256('hello world'));\nSELECT text_reverse('QueryLight');\nSELECT math_sqrt(144);\nSELECT stats_median(value) FROM (VALUES (1),(2),(3),(4),(100));",
       "upstream": {
         "repo": "nalgeon/sqlean",
         "tagPrefix": ""
