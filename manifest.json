@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-04T11:00:00Z",
+  "updatedAt": "2026-10-18T11:56:21Z",
   "extensions": [
     {
       "id": "sqlite-vec",
       "name": "sqlite-vec",
-      "description": "Vector search for SQLite \u2014 fast, pure C, no dependencies.",
+      "description": "Vector search for SQLite — fast, pure C, no dependencies.",
       "version": "0.1.9",
       "homepage": "https://github.com/asg017/sqlite-vec",
       "entryPoint": null,
-      "sampleSQL": "-- sqlite-vec: create a vector table and search\nCREATE VIRTUAL TABLE demo_vectors USING vec0(embedding float[4]);\nINSERT INTO demo_vectors(rowid, embedding) VALUES (1, '[1.0, 0.0, 0.0, 0.0]'), (2, '[0.0, 1.0, 0.0, 0.0]'), (3, '[0.9, 0.1, 0.0, 0.0]');\nSELECT rowid, distance FROM demo_vectors WHERE embedding MATCH '[1.0, 0.0, 0.0, 0.0]' ORDER BY distance LIMIT 3;",
+      "sampleSQL": "-- sqlite-vec: create a vector table and search\nCREATE VIRTUAL TABLE IF NOT EXISTS demo_vectors USING vec0(embedding float[4]);\nINSERT INTO demo_vectors(rowid, embedding) VALUES (1, '[1.0, 0.0, 0.0, 0.0]'), (2, '[0.0, 1.0, 0.0, 0.0]'), (3, '[0.9, 0.1, 0.0, 0.0]');\nSELECT rowid, distance FROM demo_vectors WHERE embedding MATCH '[1.0, 0.0, 0.0, 0.0]' ORDER BY distance LIMIT 3;",
       "upstream": {
         "repo": "asg017/sqlite-vec",
         "tagPrefix": "v"
@@ -30,24 +30,24 @@
     {
       "id": "sqlean",
       "name": "sqlean",
-      "description": "All-in-one SQLite toolkit \u2014 crypto, text, math, stats, regexp, uuid, and more.",
-      "version": "0.28.2",
+      "description": "All-in-one SQLite toolkit — crypto, text, math, stats, regexp, uuid, and more.",
+      "version": "0.28.5",
       "homepage": "https://github.com/nalgeon/sqlean",
       "entryPoint": null,
-      "sampleSQL": "-- sqlean: try some useful functions\nSELECT hex(sha256('hello world'));\nSELECT text_reverse('QueryLight');\nSELECT math_sqrt(144);\nSELECT stats_median(value) FROM (VALUES (1),(2),(3),(4),(100));",
+      "sampleSQL": "-- sqlean: try some useful functions\nSELECT hex(sha256('hello world'));\nSELECT text_reverse('QueryLight');\nSELECT math_sqrt(144);\nSELECT stats_median(column1) FROM (VALUES (1),(2),(3),(4),(100));",
       "upstream": {
         "repo": "nalgeon/sqlean",
         "tagPrefix": ""
       },
       "platforms": {
         "macos-arm64": {
-          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.2/sqlean-macos-arm64.zip",
-          "sha256": "7600f26a655475c0750d732e4b44173ba6ea0e5efac377fac9a6e2c575bdedb5",
+          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.5/sqlean-macos-arm64.zip",
+          "sha256": "58cd9f35eace8b3e99cb4d31047fe4907ff6a1c53fdb47205118057fb40f182c",
           "filename": "sqlean.dylib"
         },
         "macos-x86_64": {
-          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.2/sqlean-macos-x64.zip",
-          "sha256": "713e598b8bbaa82473c367c7b381e57d6cf5a6cc8a2e16f77674d7e72583d691",
+          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.5/sqlean-macos-x64.zip",
+          "sha256": "0c3ed97c79c74f2d62c6e8928da2b9fab78b71d803b1734b1ad3ac161a5618a7",
           "filename": "sqlean.dylib"
         }
       }
