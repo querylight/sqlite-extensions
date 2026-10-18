@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -13,6 +14,12 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      # GitHub disables scheduled workflows after 60 days without repo activity
+      - name: Keep schedule enabled
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/check-upstream.yml/enable"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/checkout@v4
 
       - name: Check for updates
