@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-18T11:56:21Z",
+  "updatedAt": "2026-11-16T14:56:21Z",
   "extensions": [
     {
       "id": "sqlite-vec",
@@ -31,7 +31,7 @@
       "id": "sqlean",
       "name": "sqlean",
       "description": "All-in-one SQLite toolkit — crypto, text, math, stats, regexp, uuid, and more.",
-      "version": "0.28.5",
+      "version": "0.29.0",
       "homepage": "https://github.com/nalgeon/sqlean",
       "entryPoint": null,
       "sampleSQL": "-- sqlean: try some useful functions\nSELECT hex(sha256('hello world'));\nSELECT text_reverse('QueryLight');\nSELECT math_sqrt(144);\nSELECT stats_median(column1) FROM (VALUES (1),(2),(3),(4),(100));",
@@ -41,13 +41,13 @@
       },
       "platforms": {
         "macos-arm64": {
-          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.5/sqlean-macos-arm64.zip",
-          "sha256": "58cd9f35eace8b3e99cb4d31047fe4907ff6a1c53fdb47205118057fb40f182c",
+          "url": "https://github.com/nalgeon/sqlean/releases/download/0.29.0/sqlean-macos-arm64.zip",
+          "sha256": "c4f2a6bc5cc57b9bf27e7b12a36f9abb92ceffb2260bb9dbc63a06d475c28d2d",
           "filename": "sqlean.dylib"
         },
         "macos-x86_64": {
-          "url": "https://github.com/nalgeon/sqlean/releases/download/0.28.5/sqlean-macos-x64.zip",
-          "sha256": "0c3ed97c79c74f2d62c6e8928da2b9fab78b71d803b1734b1ad3ac161a5618a7",
+          "url": "https://github.com/nalgeon/sqlean/releases/download/0.29.0/sqlean-macos-x64.zip",
+          "sha256": "1aff407aef505fd2e28afdaf6d64f252040a7a71b5e2681e83e7c905e36c1717",
           "filename": "sqlean.dylib"
         }
       }
